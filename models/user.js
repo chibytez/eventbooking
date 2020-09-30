@@ -1,6 +1,6 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 
 const userSchema = new Schema({
   email: {
@@ -13,10 +13,10 @@ const userSchema = new Schema({
   },
   createdEvents: [
     {
-       type: Schema.Types.ObjectId,
-       ref: 'Event'
+      type: Schema.Types.ObjectId,
+      ref: 'Event'
     }
   ]
 });
 
-export default mongoose.model('User', userSchema)
+export default mongoose.model('User', userSchema);

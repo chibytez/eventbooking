@@ -1,4 +1,4 @@
-import { buildSchema} from 'graphql';
+import { buildSchema } from 'graphql';
 
 export default buildSchema(`
 
@@ -55,4 +55,4 @@ schema {
   query: Query 
   mutation: Mutation
 }
-`)
+`);
