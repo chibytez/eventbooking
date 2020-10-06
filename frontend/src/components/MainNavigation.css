@@ -4,7 +4,7 @@
   top: 0;
   width: 100%;
   height: 3.5rem;
-  background: #01d1d1;
+  background: #8792c5;
   padding: 0 1rem;
   display: flex;
   align-items: center;
@@ -24,19 +24,31 @@
   list-style:none;
   padding: 0;
   margin: 0;
+  align-items: center;
 }
 
 .main-navigation_items li {
   margin: 0 1rem;
 }
 
-.main-navigation_items a {
+.main-navigation_items a,
+.main-navigation_items button {
   text-decoration: none;
-  color: #000
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  font: inherit;
+  background: transparent;
+  cursor: pointer;
+  margin:0;
 }
 
 .main-navigation_items a:hover,
 .main-navigation_items a:active,
-.main-navigation_items a.active{
-  color: #d6d6d0
+.main-navigation_items a.active,
+.main-navigation_items button:hover
+.main-navigation_items button:active {
+  background: #ffffff;
+  color: #5101d1;
+  border-radius: 5px;
 }
