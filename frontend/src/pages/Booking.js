@@ -1,11 +1,15 @@
-import React,{ useState} from 'react';
+import React,{ Component} from 'react';
 
-const BookingPage = () => {
-  return (
-    <div>
-      <h1> the booking page</h1>
-    </div>
-  );
+class BookingPage extends Component {
+
+  render() {
+    return (
+      <div>
+        <h1> the booking page</h1>
+      </div>
+    );
+  }
+
 };
 
 export default BookingPage;
