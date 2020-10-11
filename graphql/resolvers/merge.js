@@ -10,9 +10,7 @@ import { dateToString } from '../../helpers/date';
 
 const eventLoader = new DataLoader(eventIds => events(eventIds));
 
-const userLoader = new DataLoader((userIds) => {
-  return User.find({ _id: { $in: userIds } });
-});
+const userLoader = new DataLoader((userIds) => User.find({ _id: { $in: userIds } }));
 
 const events = async eventIds => {
   try {
@@ -37,7 +35,7 @@ const user = async userId => {
     const user = await userLoader.load(userId.toString());
     return {
       ...user._doc,
-      createdEvents: eventLoader.loadMany.bind(this, user._doc.createdEvents)
+      createdEvents: () => eventLoader.loadMany(user._doc.createdEvents)
     };
   } catch (err) {
     throw err;
